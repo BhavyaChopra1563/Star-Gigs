@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Payouts - Star Gigs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body class="text-gray-800 font-sans bg-gray-100 bg-opacity-80">
+
+<div class="flex min-h-screen">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-white shadow-lg flex flex-col">
+    <div class="p-5 flex items-center border-b space-x-3">
+  <img src="data:image/png;base64,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" class="w-11 h-10" alt="Logo" />
+  <span class="text-2xl font-bold text-black font-bold">STAR GIGS</span>
+</div>
+<!-- Performer Tag -->
+<div class="px-5 pt-3">
+  <span class="inline-block px-4 py-1 text-med font-semibold text-black rounded-full bg-gradient-to-r from-orange-200 to-orange-500">
+    Performer
+  </span>
+</div>
+<div class="pt-4 pl-8">
+  <span class="text-med font-medium text-black">Main</span>
+</div>
+
+    <nav class="flex-1 p-4 space-y-2">
+      <a href="dashboard.html" class="flex items-center px-4 py-2 rounded hover:bg-gray-100">
+        <img src="https://img.icons8.com/?size=100&id=0yJn8xaAlu6V&format=png&color=000000" class="w-5 h-5 mr-2" alt="Dashboard" />
+        Dashboard
+      </a>
+      <a href="performance.html" class="flex items-center px-4 py-2 rounded hover:bg-gray-100">
+        <img src="https://img.icons8.com/?size=100&id=Dkg13SQk5FV2&format=png&color=000000" class="w-5 h-5 mr-2" alt="performance" />
+        Performance
+      </a>
+      <a href="Gigs.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100">
+  <img src="https://img.icons8.com/?size=100&id=WH1YriG8LS3D&format=png&color=000000" class="w-6 h-6 mr-2" alt="Gigs" />
+  <span>Gigs</span>
+</a>
+      <a href="Messages.html" class="flex items-center px-4 py-2 rounded hover:bg-gray-100">
+        <img src="https://img.icons8.com/?size=100&id=16027&format=png&color=000000" class="w-5 h-5 mr-2" alt="Messages" />
+        Messages
+      </a>
+      <a href="calender.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100">
+  <img src="https://img.icons8.com/?size=100&id=8yG2a6v2mm3S&format=png&color=000000" class="w-6 h-6 mr-2" alt="Calendar" />
+  <span>Calendar</span>
+</a>
+      <a href="payout.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100 font-bold">
+  <img src="https://img.icons8.com/?size=100&id=CMo1Q90tVfkL&format=png&color=000000" class="w-6 h-6 mr-2" alt="Payout" />
+  <span>Payout</span>
+</a>
+      <a href="Profile.html" class="flex items-center px-3 py-2 rounded hover:bg-gray-100">
+  <img src="https://img.icons8.com/?size=100&id=23392&format=png&color=000000" class="w-6 h-6 mr-2" alt="Profile" />
+  <span>Profile</span>
+</a>
+      <div class="mt-6 border-t pt-4">
+        <p class="text-xs text-gray-500 uppercase mb-4">Settings</p>
+        <a href="Settings.html" class="flex items-center px-4 py-2 mt-2 rounded hover:bg-gray-100 text-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.983 13.452a1.47 1.47 0 100-2.94 1.47 1.47 0 000 2.94z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.93 12a7.048 7.048 0 01.195-1.608l-1.82-1.45a.39.39 0 01-.095-.49l1.73-2.998a.39.39 0 01.478-.174l2.146.86a7.06 7.06 0 011.5-.87l.325-2.29a.39.39 0 01.387-.331h3.465a.39.39 0 01.387.33l.326 2.291a7.06 7.06 0 011.5.87l2.145-.86a.39.39 0 01.478.175l1.73 2.997a.39.39 0 01-.095.49l-1.82 1.45c.084.525.13 1.063.13 1.61s-.046 1.085-.13 1.61l1.82 1.45a.39.39 0 01.095.49l-1.73 2.998a.39.39 0 01-.478.174l-2.146-.86a7.06 7.06 0 01-1.5.87l-.325 2.29a.39.39 0 01-.387.331h-3.465a.39.39 0 01-.387-.33l-.326-2.291a7.06 7.06 0 01-1.5-.87l-2.145.86a.39.39 0 01-.478-.175l-1.73-2.997a.39.39 0 01.095-.49l1.82-1.45A7.048 7.048 0 014.93 12z" />
+          </svg>
+          <span class="text-sm font-bold">Settings</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Right Content -->
+  <div class="flex-1 flex flex-col">
+
+  <!-- Header Bar -->
+<header class="w-full bg-white shadow h-20 flex justify-end items-center px-6 relative">
+  <!-- Right Side -->
+  <div class="flex items-center space-x-6">
+    
+    <!-- Notification Bell -->
+    <button class="relative focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 hover:text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 
+              6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 
+              6.165 6 8.388 6 11v3.159c0 .538-.214 
+              1.055-.595 1.436L4 17h5m6 0v1a3 
+              3 0 11-6 0v-1m6 0H9" />
+      </svg>
+      <span class="absolute -top-1 -right-1 inline-block w-2 h-2 bg-red-600 rounded-full"></span>
+    </button>
+
+    <!-- Profile Dropdown -->
+    <div class="relative group text-black">
+      <div class="flex items-center space-x-3 cursor-pointer">
+        <img src="https://i.pravatar.cc/40?img=3" alt="Profile" class="w-10 h-10 rounded-full border-2 border-orange-500">
+        <span class="text-sm">Hello! <strong>Andrew Smith</strong></span>
+      </div>
+      <!-- Dropdown -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-40 bg-white text-gray-700 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition duration-150 z-50">
+        <a href="Profile.html" class="block px-4 py-2 text-sm hover:bg-gray-100">View Profile</a>
+        <a href="Settings.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Settings</a>
+        <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100">Logout</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <!-- Tabs -->
+    <div class="flex-1 p-4 sm:p-6 md:p-8 overflow-x-auto">
+  <div class="bg-white bg-opacity-95 p-4 sm:p-6 rounded-xl shadow-xl w-full max-w-7xl mx-auto overflow-hidden">
+
+      <div class="flex justify-between items-center mb-4">
+        <div class="text-xl font-bold">Payouts</div>
+        <select id="monthSelector" class="border px-3 py-1 rounded text-sm">
+          <option value="">All</option>
+          <option value="2025-01">January</option>
+          <option value="2025-02">February</option>
+        </select>
+      </div>
+
+      <div class="flex space-x-4 mb-6">
+        <button onclick="showTab('options')" class="tab-btn bg-orange-500 text-white px-4 py-2 rounded">PAYOUT OPTIONS</button>
+        <button onclick="showTab('history')" class="tab-btn border px-4 py-2 rounded hover:bg-gray-100">PAYOUT HISTORY</button>
+        <button onclick="showTab('taxes')" class="tab-btn border px-4 py-2 rounded hover:bg-gray-100">TAXES</button>
+      </div>
+
+      <!-- Tab Content -->
+      <div id="optionsTab" class="tab-content">
+        <div class="bg-white p-6 rounded shadow">
+          <h2 class="text-lg font-semibold mb-4">How you get paid</h2>
+          <div class="py-4 border-b flex justify-between items-center">
+            <div>
+              <p class="font-medium">FastPay™</p>
+              <p class="text-sm text-gray-500">**** **** **** 9820 – Withdraws within 5 mins</p>
+            </div>
+            <button class="text-sm border border-gray-300 px-4 py-1 rounded hover:bg-gray-100">Edit</button>
+          </div>
+          <div class="py-4 flex justify-between items-center">
+            <div>
+              <p class="font-medium">Bank Account</p>
+              <p class="text-sm text-gray-500">Checking — ****3024, HSBC Canada</p>
+            </div>
+            <button class="text-sm border border-gray-300 px-4 py-1 rounded hover:bg-gray-100">Edit</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="historyTab" class="tab-content hidden">
+        <table class="w-full table-auto text-sm bg-white rounded shadow">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="text-left p-3">Status</th>
+              <th class="text-left p-3">Amount</th>
+              <th class="text-left p-3">Event</th>
+              <th class="text-left p-3">Client</th>
+              <th class="text-left p-3">Date & Time</th>
+              <th class="text-left p-3">Gig Type</th>
+              <th class="text-center p-3">Action</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody"></tbody>
+        </table>
+      </div>
+
+      <div id="taxesTab" class="tab-content hidden">
+        <p class="text-gray-600 text-sm">Tax-related settings will appear here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showTab(tab) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+    document.getElementById(tab + 'Tab').classList.remove('hidden');
+  }
+
+  const data = [
+    { status: 'Received', amount: '$1,367', event: 'Sunset Music Festival', client: 'Jenny from CBG8’s', date: '15 Apr 2025, 8:30pm', type: 'SOLO', month: '2025-04' },
+    { status: 'Pending', amount: '$2,000', event: 'Sunset Music Festival', client: 'Jenny from CBG8’s', date: '15 Apr 2025, 8:30pm', type: 'BAND', month: '2025-04' },
+    { status: 'Received', amount: '$988', event: 'Sunset Music Festival', client: 'Jenny from CBG8’s', date: '15 Feb 2025, 8:30pm', type: 'SOLO', month: '2025-02' }
+  ];
+
+  const body = document.getElementById('historyBody');
+  const monthSelector = document.getElementById('monthSelector');
+
+  function renderTable(month) {
+    body.innerHTML = data.filter(d => !month || d.month === month).map(d => `
+      <tr class="border-b">
+        <td class="p-3"><span class="text-xs px-2 py-1 rounded-full ${d.status === 'Received' ? 'bg-blue-100 text-blue-700' : 'bg-yellow-100 text-yellow-700'}">${d.status}</span></td>
+        <td class="p-3 font-semibold">${d.amount}</td>
+        <td class="p-3">${d.event}</td>
+        <td class="p-3">${d.client}</td>
+        <td class="p-3">${d.date}</td>
+        <td class="p-3">${d.type}</td>
+        <td class="p-3 text-center"><img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt="msg" class="w-5 h-5 inline-block" /></td>
+      </tr>
+    `).join('');
+  }
+
+  monthSelector.addEventListener('change', (e) => {
+    renderTable(e.target.value);
+  });
+
+  renderTable('');
+</script>
+
+</body>
+</html>

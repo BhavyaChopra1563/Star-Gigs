@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Star Gigs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <div class="flex min-h-screen">
+
+    <!-- Left: Image + Text -->
+    <div class="md:w-1/2 w-full h-80 md:h-auto bg-cover bg-center relative" style="background-image: url('https://www.stagepittsburgh.com/wp-content/uploads/2025/04/RRRMAIN.jpg-1.webp')">
+      <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-end p-8 text-white">
+        <div class="flex items-center space-x-4">
+                <img src="data:image/png;base64,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" class="w-10 h-9 rounded-lg" alt="Logo" />
+      <a href="index.html" class="text-3xl font-bold hover:underline">STAR GIGS</a>
+    </div>
+        <h2 class="text-2xl mt-2 font-semibold leading-snug">Discover &<br/>Get Discovered!</h2>
+        <p class="text-sm mt-6">© STAR GIGS 2024. ALL RIGHTS RESERVED</p>
+      </div>
+    </div>
+
+
+    <!-- Right: Sign Up Form -->
+    <div class="md:w-1/2 w-full p-8">
+      <h2 class="text-xl font-semibold mb-4">Join <span class="text-orange-600 font-bold">STAR GIGS</span></h2>
+      <p class="text-sm mb-6 text-gray-600">Showcase your talent and get discovered.</p>
+
+      <form class="space-y-4">
+        <div>
+          <label class="text-sm block mb-1">Full Name</label>
+          <input type="text" placeholder="John Doe" class="w-full px-4 py-2 border rounded-lg" />
+        </div>
+        <div>
+          <label class="text-sm block mb-1">Email</label>
+          <input type="email" placeholder="john@example.com" class="w-full px-4 py-2 border rounded-lg" />
+        </div>
+        <div>
+          <label class="text-sm block mb-1">Password</label>
+          <input type="password" placeholder="••••••••" class="w-full px-4 py-2 border rounded-lg" />
+        </div>
+        <div>
+          <label class="text-sm block mb-1">Confirm Password</label>
+          <input type="password" placeholder="••••••••" class="w-full px-4 py-2 border rounded-lg" />
+        </div>
+
+      <a href="Sign up.html" class="w-full block text-center bg-black text-white py-2 rounded-lg hover:bg-gray-900 transition">
+  Sign Up
+</a>
+      </form>
+
+      <!-- Social Logins -->
+      <div class="flex justify-center space-x-4 mt-6">
+        <button class="p-2 rounded-full border hover:bg-gray-100">
+          <img src="https://www.svgrepo.com/show/475647/google-color.svg" alt="Google" class="w-6 h-6" />
+        </button>
+        <button class="p-2 rounded-full border hover:bg-gray-100">
+          <img src="https://www.svgrepo.com/show/475661/facebook-color.svg" alt="Facebook" class="w-6 h-6" />
+        </button>
+      </div>
+
+      <p class="text-center text-sm text-gray-500 mt-6">
+        Already have an account? <a href="login.html" class="text-purple-600 font-medium hover:underline">Log in</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
