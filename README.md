@@ -1,5 +1,7 @@
 # Star Gigs – Project Overview
 
+Preview site live at - https://bhavyachopra1563.github.io/Star-Gigs/
+
 ## 🎵 About Star Gigs
 
 **Star Gigs** is a dynamic web platform designed to connect event organizers with talented performers. It simplifies discovering, booking, and managing performances with separate dashboards for clients and organizers.
