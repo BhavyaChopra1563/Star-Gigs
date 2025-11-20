@@ -82,7 +82,7 @@ The contact form on `Contact us.html` is fully integrated with **Formspree**:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/star-gigs.git
+   git clone https://bhavyachopra1563.github.io/Star-Gigs/.git
    ```
 2. Open `index.html` in your browser or use **Live Server** in VS Code.
 3. Test the **Contact Us** form to confirm message delivery via Formspree.
